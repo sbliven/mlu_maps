@@ -1,2 +1,8 @@
 # mlu_maps
-Maps for My Little Universe
+
+2D maps for My Little Universe
+
+Example:
+
+![](maps/diamond_mine.svg)
+
