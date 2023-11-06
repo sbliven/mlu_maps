@@ -1,0 +1,625 @@
+defs:
+- &platform
+  type: platform
+  height: 20
+- &ocean
+  type: ocean
+  height: 0
+- &wall
+  type: wall
+  height: 30
+- &plain
+  type: plain
+  height: 10
+
+
+levels:
+- name: Diamond Mine
+  defaults:
+    <<: *ocean
+    rotation: 4
+  background: "#D298DB"
+  grid:
+    major: 4
+    origin: [3, -2]
+  regions:
+  - name: diamond
+    tiles:
+    - coord: [5, 3]
+      <<: *platform
+      resources:
+      - Willow Tree
+    - coord: [6, 3]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+    - coord: [7, 3]
+      <<: *ocean
+    
+    - coord: [6, 4]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [7, 4]
+      <<: *ocean
+    - coord: [8, 4]
+      <<: *ocean
+    
+    - coord: [7, 5]
+      <<: *platform
+      decor:
+      - bridge_sw_ne
+    - coord: [8, 5]
+      <<: *ocean
+    - coord: [9, 5]
+      <<: *ocean
+
+    - coord: [4,3] #[4, 6]
+      <<: *platform
+    - coord: [5,4] #[5, 6]
+      <<: *ocean
+    - coord: [6,5] #[6, 6]
+      <<: *ocean
+    - coord: [7, 6]
+      <<: *platform
+      sides: 5
+      resources:
+      - Willow Tree
+    - coord: [8, 6]
+      <<: *platform
+    - coord: [9, 6]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+    - coord: [10, 6]
+      <<: *ocean
+
+    - coord: [5, 7]
+      <<: *ocean
+    - coord: [6, 7]
+      <<: *ocean
+    - coord: [7, 7]
+      <<: *wall
+    - coord: [8, 7]
+      <<: *platform
+      resources:
+      - Pirate Entrance
+    - coord: [9, 7]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [10, 7]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+
+    - coord: [6, 8]
+      <<: *ocean
+    - coord: [7, 8]
+      <<: *ocean
+    - coord: [8, 8]
+      <<: *wall
+    - coord: [9, 8]
+      <<: *wall
+    - coord: [10, 8]
+      <<: *wall
+      
+    - coord: [19,3] #[7, 9]
+      <<: *platform
+      resources:
+      - Willow Tree
+      - Willow Tree
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [18,3] #[8, 9]
+      <<: *platform
+      resources:
+      - Willow Tree
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [9, 9]
+      <<: *ocean
+    - coord: [10, 9]
+      <<: *ocean
+
+    
+    - coord: [0, -2]
+      <<: *wall
+    - coord: [1, -2]
+      <<: *wall
+      height: 50
+    - coord: [2, -2]
+      <<: *wall
+      height: 50
+    - coord: [3, -2]
+      <<: *wall
+      height: 50
+      sides: 5
+      rotation: 1
+    - coord: [4, -2]
+      <<: *wall
+      height: 50
+    - coord: [5, -2]
+      <<: *wall
+    - coord: [6, -2]
+      <<: *ocean
+    - coord: [7, -2]
+      <<: *platform
+      sides: 5
+      rotation: 1
+    - coord: [8, -2]
+      <<: *ocean
+    - coord: [9, -2]
+      <<: *ocean
+    - coord: [10, -2]
+      <<: *ocean
+    - coord: [11, -2]
+      <<: *ocean
+      sides: 5
+      rotation: 1
+    - coord: [12, -2]
+      <<: *wall
+    - coord: [13, -2]
+      <<: *wall
+    - coord: [14, -2]
+      <<: *wall
+      decor:
+      - hover_platform
+    - coord: [15, -2]
+      <<: *wall
+      sides: 5
+      rotation: 1
+    - coord: [16, -2]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+    - coord: [17, -2]
+      <<: *wall
+    - coord: [18, -2]
+      <<: *wall
+    - coord: [19, -2]
+      <<: *wall
+      sides: 5
+      rotation: 2
+      
+    - coord: [1, -1]
+      <<: *wall
+    - coord: [2, -1]
+      <<: *wall
+      height: 50
+    - coord: [3, -1]
+      <<: *wall
+      height: 70
+    - coord: [4, -1]
+      <<: *wall
+      height: 50
+    - coord: [5, -1]
+      <<: *wall
+    - coord: [6, -1]
+    - coord: [7, -1]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [8, -1]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [9, -1]
+      <<: *ocean
+    - coord: [10, -1]
+      <<: *ocean
+    - coord: [11, -1]
+      <<: *ocean
+    - coord: [12, -1]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [13, -1]
+      <<: *platform
+      decor:
+      - bridge_w_e
+    - coord: [14, -1]
+      <<: *platform
+      decor:
+      - sign
+      - sign
+    - coord: [15, -1]
+      <<: *platform
+      resources:
+      - spider
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [16, -1]
+      <<: *wall
+    - coord: [17, -1]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [18, -1]
+      <<: *wall
+    - coord: [19, -1]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [20, -1]
+      <<: *platform
+      resources:
+      - spider
+
+    - coord: [2, 0]
+      <<: *wall
+    - coord: [3, 0]
+      <<: *wall
+      height: 50
+    - coord: [4, 0]
+      <<: *wall
+      height: 50
+    - coord: [5, 0]
+      <<: *wall
+    - coord: [6, 0]
+      <<: *ocean
+    - coord: [7, 0]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Willow Tree
+    - coord: [8, 0]
+      <<: *platform
+      resources:
+      - spider
+      - spider
+      - spider
+    - coord: [9, 0]
+      <<: *platform
+      decor:
+      - sign
+    - coord: [10, 0]
+      <<: *platform
+      decor:
+      - bridge_w_e
+    - coord: [11, 0]
+      <<: *platform
+    - coord: [12, 0]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [13, 0]
+      <<: *ocean
+    - coord: [14, 0]
+      <<: *ocean
+    - coord: [15, 0]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [16, 0]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [17, 0]
+      <<: *wall
+    - coord: [18, 0]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [19, 0]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+    - coord: [20, 0]
+      <<: *wall
+    - coord: [21, 0]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+
+    - coord: [3, 1]
+      <<: *wall
+    - coord: [4, 1]
+      <<: *wall
+    - coord: [5, 1]
+      <<: *wall
+    - coord: [6, 1]
+      <<: *platform
+    - coord: [7, 1]
+      <<: *platform
+      decor:
+      - bridge_w_e
+    - coord: [8, 1]
+      <<: *platform
+      resources:
+      - Willow Tree
+    - coord: [9, 1]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [10, 1]
+      <<: *ocean
+    - coord: [11, 1]
+      <<: *ocean
+    - coord: [12, 1]
+      <<: *ocean
+    - coord: [13, 1]
+      <<: *ocean
+    - coord: [14, 1]
+      <<: *ocean
+    - coord: [15, 1]
+      <<: *ocean
+    - coord: [16, 1]
+      <<: *ocean
+    - coord: [17, 1]
+      <<: *platform
+      resources:
+      - Willow Tree
+    - coord: [18, 1]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [19, 1]
+      <<: *platform
+      decor:
+      - lift
+    - coord: [20, 1]
+      <<: *wall
+    - coord: [21, 1]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Spider
+    - coord: [22, 1]
+      <<: *platform
+
+    - coord: [4, 2]
+      <<: *wall
+    - coord: [5, 2]
+      <<: *wall
+    - coord: [6, 2]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+      - Coal Hex Rock 2
+    - coord: [7, 2]
+      <<: *ocean
+      sides: 5
+    - coord: [8, 2]
+      <<: *ocean
+    - coord: [9, 2]
+      <<: *ocean
+    - coord: [10, 2]
+      <<: *ocean
+    - coord: [11, 2]
+      <<: *ocean
+      sides: 5
+    - coord: [12, 2]
+      <<: *ocean
+    - coord: [13, 2]
+      <<: *ocean
+    - coord: [14, 2]
+      <<: *ocean
+    - coord: [15, 2]
+      <<: *ocean
+      sides: 5
+    - coord: [16, 2]
+      <<: *ocean
+    - coord: [17, 2]
+      <<: *platform
+      resources:
+      - Willow Tree
+      - Willow Tree
+      - Diamond Rock 2
+    - coord: [18, 2]
+      <<: *platform
+      resources:
+      - Gold Key
+    - coord: [19, 2]
+      <<: *platform
+      sides: 5
+    - coord: [20, 2]
+      <<: *ocean
+    - coord: [21, 2]
+      <<: *ocean
+      decor:
+      - sleeping_giant
+    - coord: [22, 2]
+      <<: *ocean
+    - coord: [23, 2]
+      <<: *platform
+      sides: 5
+      decor:
+      - bridge_sw_nw
+
+
+    - coord: [8, -9]
+      <<: *wall
+      decor:
+      - mining_ogre
+      
+    - coord: [8, -8]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [9, -8]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+      
+    - coord: [12, -8]
+      <<: *wall
+    
+    - coord: [8, -7]
+      <<: *wall
+    - coord: [9, -7]
+      <<: *platform
+      resources:
+      - Willow Tree
+    - coord: [10, -7]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [12, -7]
+      <<: *wall
+    - coord: [13, -7]
+      <<: *wall
+      height: 50
+    
+    
+    - coord: [8, -6]
+      <<: *platform
+      resources:
+      - Coal Hex Rock 2
+    - coord: [9, -6]
+      <<: *platform
+      resources:
+      - Spider
+    - coord: [10, -6]
+      <<: *wall
+    - coord: [11, -6]
+      <<: *wall
+      sides: 5
+      rotation: 3
+    - coord: [12, -6]
+      <<: *wall
+    - coord: [13, -6]
+      <<: *wall
+      height: 50
+    - coord: [14, -6]
+      <<: *wall
+      height: 50
+    
+    - coord: [9, -5]
+    - coord: [10, -5]
+      <<: *wall
+    - coord: [11, -5]
+      <<: *platform
+    - coord: [12, -5]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+      - Diamond Rock 2
+      - Diamond Rock 2
+    - coord: [13, -5]
+      <<: *wall
+    - coord: [14, -5]
+      <<: *wall
+      height: 50
+    
+    - coord: [10, -4]
+      <<: *wall
+    - coord: [11, -4]
+      <<: *platform
+    - coord: [12, -4]
+      <<: *platform
+      resources:
+      - Cyclops Boss
+    - coord: [13, -4]
+      <<: *platform
+      resources:
+      - Diamond Rock 2
+    - coord: [14, -4]
+      <<: *wall
+    - coord: [11, -3]
+      <<: *wall
+    - coord: [12, -3]
+      <<: *platform
+      resources:
+      - Source Core
+    - coord: [13, -3]
+      <<: *platform
+    - coord: [14, -3]
+      <<: *platform
+      decor:
+      - door_e
+
+    
+styles: |
+  svg {
+    background-color: grey;
+  }
+  svg#l-diamond-mine {
+    background-color: #D298DB;
+  }
+  .grid-major {
+    stroke-width:1.5;
+  }
+  .grid-minor {
+    stroke-width:.5;
+  }
+  .tile {
+    fill: white;
+    stroke: black;
+    stroke-width: 0.5;
+  }
+  .t-plain.tile-top {
+    fill: #F5B908;
+  }
+  .t-plain.tile-left {
+    fill: #351709;
+  }
+  .t-plain.tile-right {
+    fill: #6C3319;
+  }
+  .t-ocean {
+    stroke: none;
+    fill: #0000aa;
+  }
+  .t-wall.tile-top {
+    fill: #514660;
+  }
+  .t-wall.tile-left {
+    fill: #20182E;
+  }
+  .t-wall.tile-right {
+    fill: #20182E;
+  }
+  .r-diamond.t-ocean.tile-top {
+    fill: #340043;
+  }
+  .r-diamond.t-platform.tile-top {
+    fill: #066B7E;
+  }
+  .r-diamond.t-platform.tile-left {
+    fill: #07455A;
+  }
+  .r-diamond.t-platform.tile-right {
+    fill: #015C6A;
+  }

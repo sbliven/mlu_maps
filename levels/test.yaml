@@ -1,0 +1,96 @@
+defs:
+- &platform
+  type: platform
+  height: 20
+- &ocean
+  type: ocean
+  height: 0
+- &wall
+  type: wall
+  height: 30
+- &plain
+  type: plain
+  height: 10
+
+
+levels:
+- name: testlvl
+  defaults: *ocean
+  background: white
+  grid:
+      origin: [0,-1]
+      major: 2
+      minor: 1
+  regions:
+  - name: home
+    defaults: *plain
+    tiles:
+    - coord: [0,0]
+      resources:
+      - Plank
+    - coord: [2,2]
+      <<: *wall
+      resources:
+      - Rock
+      - Spider
+      - Acorn
+      - Sulphur Deposit 2
+      - Sandstone Rock
+      - Rock Monster
+    - coord: [1,1]
+      height: 0
+    - coord: [1,-1]
+      height: 0
+    - coord: [2,1]
+      height: 0
+    - coord: [2,0]
+      height: 0
+  - name: default
+    tiles:
+    - coord: [1,0]
+      resources:
+      - Rock
+      - Rock
+      height: 20
+      type: wall
+      sides: 5
+      rotation: -1
+
+styles: |
+  svg {
+    background-color: grey;
+  }
+  .grid-major {
+    stroke-width:1.5;
+  }
+  .grid-minor {
+    stroke-width:.5;
+  }
+  .tile {
+    fill: white;
+    stroke: black;
+    stroke-width: 0.5;
+  }
+  .t-plain.tile-top {
+    fill: #F5B908;
+  }
+  .t-plain.tile-left {
+    fill: #351709;
+  }
+  .t-plain.tile-right {
+    fill: #6C3319;
+  }
+  .t-ocean {
+    stroke: none;
+    fill: #0000aa;
+  }
+  .t-wall.tile-top {
+    fill: #514660;
+  }
+  .t-wall.tile-left {
+    fill: #20182E;
+  }
+  .t-wall.tile-right {
+    fill: #20182E;
+  }
+
