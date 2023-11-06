@@ -6,6 +6,7 @@ import itertools
 from io import StringIO,BytesIO
 import base64
 import pathlib
+import argparse
 
 camera_angle = pi/4  # camera angle from zenith
 spacing = 40  # width of one hex
@@ -216,9 +217,19 @@ def make_grid(spacing, xmin, ymin, xmax, ymax, origin=[0,0], major=1, minor=0, *
 def svg_identifier(cleartext):
     return cleartext.lower().encode('ascii',errors='ignore').decode().strip().replace(" ","-")
 
-def make_level(config, level_name):
-    level = [l for l in config["levels"] if l["name"] == level_name][0]
-    level_id = f"l-{svg_identifier(level_name)}"
+def select_level(config, level_name=0):
+    matching_levels = [l for l in config["levels"] if l["name"] == level_name]
+    if len(matching_levels) > 0:
+        return matching_levels[0]
+    try:
+        level_num = int(level_name)
+        return config["levels"][level_num]
+    except:
+        raise ValueError(f"Level {level_name} not found")
+
+def make_level(config, level_name=0):
+    level = select_level(config, level_name)
+    level_id = f"l-{svg_identifier(level['name'])}"
 
     
     svg = svgwrite.Drawing(
@@ -319,3 +330,23 @@ def make_level(config, level_name):
         tilegroup.add(tiles[k])
     
     return svg
+
+
+def main(args=None):
+    parser = argparse.ArgumentParser(
+                    prog='mlu_map',
+                    description='Create a map from a yaml description')
+    parser.add_argument('filename', help="yaml level file", type=argparse.FileType('r'))
+    parser.add_argument('output', help="svg output file")
+    parser.add_argument('-l','--level', help="level name or index", default="0")
+
+    args = parser.parse_args(args)
+
+    config = yaml.safe_load(args.filename)
+
+    lvl = make_level(config, args.level)
+    lvl.saveas(args.output, pretty=True, indent=2)
+
+if __name__ == "__main__":
+    main()
+

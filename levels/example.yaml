@@ -1,39 +1,3 @@
-# Usage
-
-## Installation
-
-Running `mlu_map.py` requires python and the following packages:
-- svgwrite
-- pyyaml
-
-These can be installed with pip:
-```
-pip install svgwrite pyyaml
-```
-
-or with conda:
-```
-conda env create -f environment.yaml
-conda activate mlu
-```
-
-## Running
-
-Use `mlu_map.py` to generate the level:
-
-```
-python mlu_map.py levels/test.yaml docs/maps/test.svg
-```
-
-## Level syntax
-
-Levels are defined by a yaml file. See `levels/` for examples.
-
-### Example
-
-Here is the `test.yaml` example. Some aspects are expanded on below.
-
-```yaml
 # Define anchors that can be reused later with `<<: *anchor`
 defs:
 - &platform
@@ -146,32 +110,4 @@ styles: |
     fill: #6C3319;
   }
 
-```
 
-### Tile attributes
-
-Most of the configuration consists of the `tiles` array. Each hexagon is assigned an
-[x,y] coordinate, where the x-axis goes horizontally and the y-axis is at a 120° angle
-increasing to the top left.
-
-Each tile is assigned a type. The types are arbitrary strings, but are used for styling
-each tile using CSS.
-
-Tiles are grouped into levels and regions. Defaults for attributes such as `type` and 
-`height` can be defined in the `defaults` dictionary for levels and regions and then
-overridden.
-
-The example uses [anchors and aliases](https://yaml.org/spec/1.2.2/#3222-anchors-and-aliases)
-and [merge keys](https://yaml.org/type/merge.html) to be more compact, but you could
-also specify `type` and `height` for each tile explicitly and omit the `defs` section.
-
-### Styles
-
-Each tile consists of a set of polygons, usually a "top" (the hexagon) and two
-parallelograms ("left" and "right"). (Some orientations of pentagons also have a third
-"mid" parallelogram, but it can be ignored for styling.) Each polygon is annotated with
-
-    class="tile r-<region> t-<type> tile-<direction>"
-
-This allows each face to be colored independently using css rules based on region, type,
-and direction.

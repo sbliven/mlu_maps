@@ -4,6 +4,8 @@ Editor for 2D maps for worlds based on
 [Goldberg polyhedra](https://en.wikipedia.org/wiki/Goldberg_polyhedron), such as
 [My Little Universe](https://say.games/games/my-little-universe/) by SayGames.
 
+**[View Maps](https://sbliven.github.io/mlu_maps/)**
+
 ![Diamond Mine](public/maps/diamond_mine.svg)
 
 ## How to read maps
