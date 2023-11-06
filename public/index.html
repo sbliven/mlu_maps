@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MLU Map</title>
+    <style>
+body {
+    background: #000;
+    color: #fff;
+}
+
+h1 {
+    color: #00BF68;
+}
+
+select {
+    background: #333;
+    color: #00BF68;
+    font-size: 24pt;
+    border: none;
+    padding: 5px 1em;
+}
+
+.container {
+    margin: 0 4%;
+}
+
+#map-img {
+    margin:2em 0;
+    width: 100%;
+}
+
+#scrollbox {
+    width: 100%;
+    height: 80vh;
+    overflow: auto;
+}
+.zoom {
+
+}
+    </style>
+</head>
+<body onload="setImage()">
+    <div class="container">
+        <!-- <h1 id="map-name">Diamond Mine</h1> -->
+        <select id="map-select" onchange="updateImage(this)">
+            <option value="maps/diamond_mine.svg">Diamond Mine</option>
+            <option value="maps/test.svg">Test</option>
+        </select>
+        <div id="scrollbox">
+            <img id="map-img" src="maps/diamond_mine.svg" alt="Map" />
+        </div>
+        <div id="zoom">
+            <span id="zoom-out" onclick="zoom(0.8)">⊖</span>
+            <span id="zoom-level">Auto</span>
+            <span id="zoom-in" onclick="zoom(1.25)">⊕</span>
+        </div>
+    </div>
+    <script>
+        function setImage() {
+            var select = document.getElementById("map-select");
+            updateImage(select);
+        }
+        function updateImage(select) {
+            const selected = select.options[select.selectedIndex];
+            const img = document.querySelector("#map-img")
+            img.src = selected.value;
+            img.alt = `${selected.innerText} Map`;
+            document.querySelector("#map-name").innerHTML = selected.innerHTML;
+
+        }
+        function zoom(scale) {
+            const img = document.querySelector("#map-img");
+            const box = document.querySelector("#scrollbox");
+            img.style.width = `${img.scrollWidth * scale}px`;
+            let percent = Math.round(100*img.scrollWidth/box.clientWidth);
+            document.querySelector("#zoom-level").innerHTML = `${percent}%`;
+        }
+    </script>
+</body>
+</html>
