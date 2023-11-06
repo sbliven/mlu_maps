@@ -6,7 +6,7 @@ Editor for 2D maps for worlds based on
 
 **[View Maps](https://sbliven.github.io/mlu_maps/)**
 
-![Diamond Mine](public/maps/diamond_mine.svg)
+![Diamond Mine](docs/maps/diamond_mine.svg)
 
 ## How to read maps
 
