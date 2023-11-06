@@ -19,9 +19,10 @@ To form a map, the 3D shape is "unrolled" by adding gaps between tiles until it 
 flat. This is called a [net](https://en.wikipedia.org/wiki/Net_(polyhedron)) and can be
 pictured like this:
 
-![Animation of an icosohedral net rolling up](https://en.wikipedia.org/wiki/Regular_icosahedron#/media/File:Icosaedro_desarrollo.gif)
+![Animation of an icosohedral net rolling up](https://upload.wikimedia.org/wikipedia/commons/a/a2/Icosaedro_desarrollo.gif)
 
-*Image Credit: "Unfolding an icosahedron" by Rectas. Wikimedia Commons. CC0*
+*Image Credit: [Unfolding an icosahedron](https://en.wikipedia.org/wiki/Regular_icosahedron#/media/File:Icosaedro_desarrollo.gif)
+by Rectas. Wikimedia Commons. CC0*
 
 This means that all edges in the map will wrap around to join up somewhere else. Paths
 in the world may cross gaps, and straight lines change direction when crossing an edge.
