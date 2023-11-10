@@ -1,7 +1,9 @@
 import argparse
 import base64
 import itertools
+import logging
 import pathlib
+import sys
 from cmath import exp
 from io import BytesIO, StringIO
 from math import cos, pi, sin, sqrt
@@ -298,13 +300,14 @@ def make_level(config, level_name=0):
     bounds = [0, 0, 0, 0]  # xmin, ymin, xmax, ymax
 
     tiles = {}
+    tile_coords = set()
     images = {}
-    for region in level["regions"]:
+    for region in level.get("regions", []):
         region_defaults = dict(level_defaults)
         if "defaults" in region:
-            region_defaults.update(region["defaults"])
+            region_defaults.update(region.get("defaults", {}))
         region_id = f"r-{svg_identifier(region['name'])}"
-        for tile in region["tiles"]:
+        for tile in region.get("tiles", []):
             attrs = dict(region_defaults)
             attrs.update(tile)
             x, y = attrs.pop("coord")
@@ -312,6 +315,7 @@ def make_level(config, level_name=0):
             type_ = attrs.pop("type", None)
             decor = attrs.pop("decor", [])
             sides = attrs.pop("sides", 6)
+            tilenum = attrs.pop("tilenum", None)
             rotation = attrs.pop("rotation", 0)
             tile_id = f"tile-{x}-{y}"
             # attrs["class"] = f"tile t-{region['name']}"
@@ -333,6 +337,10 @@ def make_level(config, level_name=0):
 
             group = svg.g(id_=tile_id)
             sort_key = (-y, attrs.get("height", 0), x)
+            if (x, y) in tile_coords:
+                logging.warning(f"Duplicate tile at {x},{y}")
+            else:
+                tile_coords.add((x, y))
             tiles[sort_key] = group
             if sides == 5:
                 geom = pentagon(
@@ -373,9 +381,15 @@ def make_level(config, level_name=0):
 
                 img_id = svg_identifier(f"img-{resource}-{len(icons)}")
                 if img_id not in images:
+                    try:
+                        img_href = embed_image(f"sprites/{resource}.png")
+                    except FileNotFoundError:
+                        logging.warning(f"Unknown resource {resource!r}")
+                        img_href = embed_image(f"sprites/question.png")
+
                     img = svg.image(
                         id_=img_id,
-                        href=embed_image(f"sprites/{resource}.png"),
+                        href=img_href,
                         size=size,
                     )
                     svg.defs.add(img)
@@ -420,8 +434,11 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-    config = yaml.safe_load(args.filename)
-
+    try:
+        config = yaml.safe_load(args.filename)
+    except yaml.composer.ComposerError as err:
+        logging.error(err)
+        sys.exit(1)
     lvl = make_level(config, args.level)
     lvl.saveas(args.output, pretty=True, indent=2)
 
