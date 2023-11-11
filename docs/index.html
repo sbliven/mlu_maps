@@ -52,7 +52,7 @@ select {
             <option value="maps/dimidium.svg">Dimidium</option>
         </select>
         <div id="scrollbox">
-            <object type="image/svg+xml" id="map-img" data="maps/diamond_mine.svg" alt="Map" onload="syncSVG();"></object>
+            <object type="image/svg+xml" id="map-img" data="maps/diamond_mine.svg" alt="Map" onload="updateLayers();"></object>
         </div>
         <footer>
             <div id="zoom" style="display: inline-block;">
@@ -61,9 +61,9 @@ select {
                 <span id="zoom-in" onclick="zoom(1.25)">⊕</span>
             </div>
             <div style="margin-left: auto; display: inline-block; float: right">
-                <input type="checkbox" id="show-resources" name="show-resources" checked onclick="updateShowResources(this)">
+                <input type="radio" id="show-resources" name="layers" value="resources" checked onclick="updateLayers(this.value)">
                 <label for="show-resources"> Resources</label>
-                <input type="checkbox" id="show-tilenum" name="show-tilenum" onclick="updateShowTilenum(this)">
+                <input type="radio" id="show-tilenum" name="layers" value="tilenum" onclick="updateLayers(this.value)">
                 <label for="show-tilenum"> Tile numbers</label>
             </div>
         </footer>
@@ -73,17 +73,13 @@ select {
             var select = document.getElementById("map-select");
             updateImage(select);
         }
-        function syncSVG() {
-            updateShowResources(document.getElementById("show-resources"));
-            updateShowTilenum(document.getElementById("show-tilenum"));
-        }
         function updateImage(select) {
             const selected = select.options[select.selectedIndex];
             const img = document.getElementById("map-img")
             img.data = selected.value;
             img.alt = `${selected.innerText} Map`;
             //document.getElementById("map-name").innerHTML = selected.innerHTML;
-
+            updateLayers();
         }
         function zoom(scale) {
             const img = document.querySelector("#map-img");
@@ -92,20 +88,22 @@ select {
             let percent = Math.round(100*img.scrollWidth/box.clientWidth);
             document.querySelector("#zoom-level").innerHTML = `${percent}%`;
         }
-        function updateShowResources(checkbox) {
+        function updateLayers(layer) {
             var svg = document.getElementById("map-img").contentDocument;
+            if(svg === null)
+                return;
+            if(!layer) {
+                layer = document.querySelector("input[name=layers]:checked").value;
+            }
             for(const elem of svg.getElementsByClassName("resource")) {
-                if(checkbox.checked) {
+                if(layer == "resources") {
                     elem.classList.remove("hidden")
                 } else {
                     elem.classList.add("hidden")
                 }
             }
-        }
-        function updateShowTilenum(checkbox) {
-            var svg = document.getElementById("map-img").contentDocument;
             for(const elem of svg.getElementsByClassName("tilenum")) {
-                if(checkbox.checked) {
+                if(layer == "tilenum") {
                     elem.classList.remove("hidden")
                 } else {
                     elem.classList.add("hidden")
