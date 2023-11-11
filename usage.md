@@ -175,3 +175,15 @@ parallelograms ("left" and "right"). (Some orientations of pentagons also have a
 
 This allows each face to be colored independently using css rules based on region, type,
 and direction.
+
+## Website
+
+The website is served statically from the `docs` folder.
+
+Javascript for dynamically showing SVG content only works when accessing the files
+from a web server (eg not with `file://`). An easy way to serve the pages is with docker:
+
+```
+docker run --name mlu -v $PWD/docs:/usr/share/nginx/html:ro -p 8080:80 -d nginx
+```
+

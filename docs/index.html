@@ -38,6 +38,10 @@ select {
 .zoom {
 
 }
+
+.hidden {
+    display: none;
+}
     </style>
 </head>
 <body onload="setImage()">
@@ -48,25 +52,37 @@ select {
             <option value="maps/dimidium.svg">Dimidium</option>
         </select>
         <div id="scrollbox">
-            <img id="map-img" src="maps/diamond_mine.svg" alt="Map" />
+            <object type="image/svg+xml" id="map-img" data="maps/diamond_mine.svg" alt="Map" onload="syncSVG();"></object>
         </div>
-        <div id="zoom">
-            <span id="zoom-out" onclick="zoom(0.8)">⊖</span>
-            <span id="zoom-level">Auto</span>
-            <span id="zoom-in" onclick="zoom(1.25)">⊕</span>
-        </div>
+        <footer>
+            <div id="zoom" style="display: inline-block;">
+                <span id="zoom-out" onclick="zoom(0.8)">⊖</span>
+                <span id="zoom-level">Auto</span>
+                <span id="zoom-in" onclick="zoom(1.25)">⊕</span>
+            </div>
+            <div style="margin-left: auto; display: inline-block; float: right">
+                <input type="checkbox" id="show-resources" name="show-resources" checked onclick="updateShowResources(this)">
+                <label for="show-resources"> Resources</label>
+                <input type="checkbox" id="show-tilenum" name="show-tilenum" onclick="updateShowTilenum(this)">
+                <label for="show-tilenum"> Tile numbers</label>
+            </div>
+        </footer>
     </div>
     <script>
         function setImage() {
             var select = document.getElementById("map-select");
             updateImage(select);
         }
+        function syncSVG() {
+            updateShowResources(document.getElementById("show-resources"));
+            updateShowTilenum(document.getElementById("show-tilenum"));
+        }
         function updateImage(select) {
             const selected = select.options[select.selectedIndex];
-            const img = document.querySelector("#map-img")
-            img.src = selected.value;
+            const img = document.getElementById("map-img")
+            img.data = selected.value;
             img.alt = `${selected.innerText} Map`;
-            document.querySelector("#map-name").innerHTML = selected.innerHTML;
+            //document.getElementById("map-name").innerHTML = selected.innerHTML;
 
         }
         function zoom(scale) {
@@ -75,6 +91,26 @@ select {
             img.style.width = `${img.scrollWidth * scale}px`;
             let percent = Math.round(100*img.scrollWidth/box.clientWidth);
             document.querySelector("#zoom-level").innerHTML = `${percent}%`;
+        }
+        function updateShowResources(checkbox) {
+            var svg = document.getElementById("map-img").contentDocument;
+            for(const elem of svg.getElementsByClassName("resource")) {
+                if(checkbox.checked) {
+                    elem.classList.remove("hidden")
+                } else {
+                    elem.classList.add("hidden")
+                }
+            }
+        }
+        function updateShowTilenum(checkbox) {
+            var svg = document.getElementById("map-img").contentDocument;
+            for(const elem of svg.getElementsByClassName("tilenum")) {
+                if(checkbox.checked) {
+                    elem.classList.remove("hidden")
+                } else {
+                    elem.classList.add("hidden")
+                }
+            }
         }
     </script>
 </body>

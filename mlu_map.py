@@ -14,7 +14,6 @@ import yaml
 camera_angle = pi / 4  # camera angle from zenith
 spacing = 40  # width of one hex
 
-
 def append_class(elem, *classes):
     """Append new classes to an SVG element"""
     allclasses = itertools.chain(elem.attribs.get("class", "").split(" "), classes)
@@ -290,8 +289,23 @@ def make_level(config, level_name=0):
         id_=level_id,
     )
 
+    css = f"""
+svg {{
+    background-color: {level.get("background", "inherit")};;
+}}
+.grid-major {{
+    stroke-width:1.5;
+}}
+.grid-minor {{
+    stroke-width:.5;
+}}
+.hidden {{
+    display: none;
+}}
+    """
     if "styles" in config:
-        svg.add(svg.style(config["styles"]))
+        css +=  config["styles"]
+    svg.add(svg.style(css))
 
     level_defaults = {"stroke": "black"}
     if "defaults" in level:
@@ -317,6 +331,7 @@ def make_level(config, level_name=0):
             sides = attrs.pop("sides", 6)
             tilenum = attrs.pop("tilenum", None)
             rotation = attrs.pop("rotation", 0)
+            height = tile.get("height",0)
             tile_id = f"tile-{x}-{y}"
             # attrs["class"] = f"tile t-{region['name']}"
 
@@ -330,7 +345,7 @@ def make_level(config, level_name=0):
             bounds[0] = min(bounds[0], center[0] - spacing)
             bounds[1] = min(
                 bounds[1],
-                center[1] - spacing - attrs.get("height", 0) * sin(camera_angle),
+                center[1] - spacing - height * sin(camera_angle),
             )
             bounds[2] = max(bounds[2], center[0] + spacing)
             bounds[3] = max(bounds[3], center[1] + spacing)
@@ -356,6 +371,10 @@ def make_level(config, level_name=0):
                     **attrs,
                 )
             group.add(geom)
+
+            if tilenum is not None:
+                group.add(svg.text(str(tilenum), insert=(center[0], center[1] - height * sin(camera_angle)), text_anchor="middle", dominant_baseline="middle", class_="tilenum hidden"))
+
             for i, resource in enumerate(icons):
                 # import pdb;pdb.set_trace()
                 # size = (spacing*(.85-.1*len(icons)), spacing*(.85-.1*len(icons)))
@@ -391,6 +410,7 @@ def make_level(config, level_name=0):
                         id_=img_id,
                         href=img_href,
                         size=size,
+                        class_="resource",
                     )
                     svg.defs.add(img)
                     images[img_id] = img
@@ -399,6 +419,7 @@ def make_level(config, level_name=0):
                     href=f"#{img_id}", insert=insert
                 )  # note that use doesn't support size
                 group.add(img)
+
 
     svg.viewbox(bounds[0], bounds[1], bounds[2] - bounds[0], bounds[3] - bounds[1])
     # svg.width = f"bounds[2]-bounds[0]

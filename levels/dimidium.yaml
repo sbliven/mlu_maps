@@ -483,7 +483,7 @@ levels:
     - coord: [5, 2]
       <<: *beach
       resources:
-      - Raft
+      - Raft Merchant
       decor:
       - sign_azurite
     - coord: [6, 2]
@@ -636,18 +636,20 @@ levels:
     - coord: [9, 2]
       <<: *beach
       resources:
-      - Raft
+      - Raft Merchant
     - coord: [10, 3]
       <<: *beach
       resources:
       - Wooden Box
       - Wooden Box
       - Wooden Box
+      tilenum: 
     - coord: [10, 4]
       <<: *beach
       resources:
       - Wooden Box
       - Wooden Box
+      tilenum: 
     - coord: [11, 4]
       <<: *ground
       height: 8
@@ -751,19 +753,79 @@ levels:
       <<: *beach
     tiles:
     - coord: [-4, -10]
+      <<: *ground
+      resources:
+      - Pile of Bones
+      tilenum: 265
     - coord: [-3, -10]
+      <<: *ground
+      resources:
+      - Big Crab Red
+      tilenum: 266
     - coord: [-2, -10]
+      resources:
+      - Wooden Box
+      - Wooden Box
+      - Wooden Box
+      tilenum: 259
     - coord: [-1, -10]
+      resources:
+      - Wooden Box
+      - Wooden Box
+      - Wooden Box
+    
     
     - coord: [-5, -11]
+      <<: *ground
+      resources:
+      - Pile of Bones
+      - Pile of Bones
+      tilenum: 264
     - coord: [-4, -11]
+      <<: *ground
+      resources:
+      - Pirate Entrance
+      tilenum: 267
     - coord: [-3, -11]
+      resources:
+      - Wooden Box
+      - Wooden Box
+      - Wooden Box
+      tilenum: 260
     - coord: [-2, -11]
-    - coord: [-1, -11] 
+      <<: *grass
+      resources:
+      - Tropical Tree
+      - Tropical Tree
+      - Tropical Tree
+      tilenum: 258
+    - coord: [-1, -11]
+      <<: *grass
+      resources:
+      - Tropical Tree
+      - Tropical Tree
+      - Tropical Tree
+      - Tropical Tree
+      tilenum: 257
 
     - coord: [-6, -12]
+      resources:
+      - Tropical Tree
+      - Tropical Tree
+      - Raft Merchant
+      tilenum: 263
     - coord: [-5, -12]
+      resources:
+      - Tropical Tree
+      - Tropical Tree
+      - Tropical Tree
+      tilenum: 262
     - coord: [-4, -12]
+      resources:
+      - Wooden Box
+      - Wooden Box
+      - Wooden Box
+      tilenum: 261
 
 
   - name: diamond-mine-island
@@ -881,7 +943,7 @@ levels:
     - coord: [-4, 4]
       <<: *beach
       resources:
-      - Raft
+      - Raft Merchant
       - Pile of Bones
 
     - coord: [-9, 5]
@@ -952,7 +1014,7 @@ levels:
     - coord: [-12, -9]
       <<: *beach
       resources:
-      - Raft
+      - Raft Merchant
       - Wooden Box
       - Wooden Box
     - coord: [-11, -9]
@@ -1047,7 +1109,7 @@ levels:
     - coord: [-21, 0]
       <<: *beach
       resources:
-      - Crab
+      - Small Crab
       - Wooden Box
     - coord: [-20, 0]
     - coord: [-19, 0]
@@ -1056,7 +1118,7 @@ levels:
       - Cactus 2
     - coord: [-18, 0]
       resources:
-      - Crab
+      - Small Crab
     - coord: [-17, 0]
       resources:
       - Cactus 2
@@ -1069,13 +1131,13 @@ levels:
       - Cactus 2
     - coord: [-18, 1]
       resources:
-      - Crab
+      - Small Crab
       - Cactus 2
       - Cactus 2
     - coord: [-17, 1]
       resources:
       - Cactus 2
-      - Crab
+      - Small Crab
     - coord: [-16, 1]
     
 
@@ -1089,7 +1151,7 @@ levels:
       resources:
       - Cactus 2
       - Cactus 2
-      - Crab
+      - Small Crab
 
     - coord: [-15, 4]
       resources:
@@ -1097,7 +1159,7 @@ levels:
     - coord: [-14, 4]
     - coord: [-13, 4]
       resources:
-      - Raft
+      - Raft Merchant
 
     
     - coord: [-13, 5]
@@ -1113,18 +1175,6 @@ levels:
 
 
 styles: |
-  svg {
-    background-color: grey;
-  }
-  svg#l-diamond-mine {
-    background-color: #BAECFF;
-  }
-  .grid-major {
-    stroke-width:1.5;
-  }
-  .grid-minor {
-    stroke-width:.5;
-  }
   .tile {
     fill: white;
     stroke: black;
