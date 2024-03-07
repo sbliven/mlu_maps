@@ -1175,11 +1175,6 @@ levels:
 
 
 styles: |
-  .tile {
-    fill: white;
-    stroke: black;
-    stroke-width: 0.5;
-  }
   .t-beach.tile-top {
     fill: #FAB13D;
   }

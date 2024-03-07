@@ -572,23 +572,6 @@ levels:
 
     
 styles: |
-  svg {
-    background-color: grey;
-  }
-  svg#l-diamond-mine {
-    background-color: #D298DB;
-  }
-  .grid-major {
-    stroke-width:1.5;
-  }
-  .grid-minor {
-    stroke-width:.5;
-  }
-  .tile {
-    fill: white;
-    stroke: black;
-    stroke-width: 0.5;
-  }
   .t-plain.tile-top {
     fill: #F5B908;
   }

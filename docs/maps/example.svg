@@ -21,6 +21,10 @@ svg {
 .hidden {
     display: none;
 }
+.tile {
+    stroke: black;
+    stroke-width: 0.5;
+}
     svg {
   background-color: grey;
 }

@@ -1,0 +1,1111 @@
+defs:
+- &ocean
+  type: ocean
+  height: 0
+- &lava
+  type: lava
+  height: 0
+- &wall
+  type: wall
+  height: 35
+- &beach
+  type: beach
+  height: 5
+- &grass
+  type: grass
+  height: 10
+- &farm
+  type: farm
+  height: 10
+- &ground
+  type: ground
+  height: 12
+- &mountain
+  type: mountain
+  height: 20
+- &swamp
+  type: lake
+  height: 0
+
+levels:
+- name: Trollheim
+  background: "#BAECFF"
+  grid:
+    major: 8
+  regions:
+  - name: ocean
+    defaults: *ocean
+    tiles:
+    - coord: [0, 0]
+      sides: 5
+      rotation: 2
+
+    - coord: [0, 1]
+    - coord: [8, 1]
+    - coord: [16, 1]
+    - coord: [24, 1]
+    - coord: [32, 1]
+
+    - coord: [1, 2]
+    - coord: [8, 2]
+    - coord: [9, 2]
+    - coord: [16, 2]
+    - coord: [17, 2]
+    - coord: [24, 2]
+    - coord: [25, 2]
+    - coord: [32, 2]
+
+
+    - coord: [2, 3]
+    - coord: [8, 3]
+    - coord: [9, 3]
+    - coord: [10, 3]
+    - coord: [16, 3]
+    - coord: [17, 3]
+    - coord: [18, 3]
+    - coord: [24, 3]
+    - coord: [25, 3]
+    - coord: [26, 3]
+    - coord: [32, 3]
+
+    - coord: [3, 4]
+    - coord: [8, 4]
+    - coord: [9, 4]
+    - coord: [10, 4]
+    - coord: [11, 4]
+    - coord: [16, 4]
+    - coord: [17, 4]
+    - coord: [18, 4]
+    - coord: [19, 4]
+    - coord: [24, 4]
+    - coord: [25, 4]
+    - coord: [26, 4]
+    - coord: [27, 4]
+    - coord: [32, 4]
+
+    - coord: [8, 5]
+    - coord: [9, 5]
+    - coord: [10, 5]
+    - coord: [11, 5]
+    - coord: [12, 5]
+    - coord: [16, 5]
+    - coord: [17, 5]
+    - coord: [18, 5]
+    - coord: [19, 5]
+    - coord: [20, 5]
+    - coord: [24, 5]
+    - coord: [25, 5]
+    - coord: [26, 5]
+    - coord: [27, 5]
+    - coord: [28, 5]
+    - coord: [32, 5]
+
+    - coord: [5, 6]
+    - coord: [8, 6]
+    - coord: [9, 6]
+    - coord: [10, 6]
+    - coord: [11, 6]
+    - coord: [12, 6]
+    - coord: [13, 6]
+    - coord: [16, 6]
+    - coord: [17, 6]
+    - coord: [18, 6]
+    - coord: [19, 6]
+    - coord: [20, 6]
+    - coord: [21, 6]
+    - coord: [24, 6]
+    - coord: [25, 6]
+    - coord: [26, 6]
+    - coord: [27, 6]
+    - coord: [28, 6]
+    - coord: [29, 6]
+    - coord: [32, 6]
+
+    - coord: [4, 7]
+    - coord: [5, 7]
+    - coord: [6, 7]
+    - coord: [8, 7]
+    - coord: [9, 7]
+    - coord: [10, 7]
+    - coord: [11, 7]
+    - coord: [12, 7]
+    - coord: [13, 7]
+    - coord: [14, 7]
+    - coord: [16, 7]
+    - coord: [17, 7]
+    - coord: [18, 7]
+    - coord: [19, 7]
+    - coord: [20, 7]
+    - coord: [21, 7]
+    - coord: [22, 7]
+    - coord: [24, 7]
+    - coord: [25, 7]
+    - coord: [26, 7]
+    - coord: [27, 7]
+    - coord: [28, 7]
+    - coord: [29, 7]
+    - coord: [30, 7]
+
+    - coord: [4, 8]
+    - coord: [5, 8]
+    - coord: [6, 8]
+    - coord: [7, 8]
+    - coord: [8, 8]
+      sides: 5
+    - coord: [9, 8]
+    - coord: [10, 8]
+    - coord: [11, 8]
+    - coord: [12, 8]
+    - coord: [13, 8]
+    - coord: [14, 8]
+    - coord: [15, 8]
+    - coord: [16, 8]
+      sides: 5
+    - coord: [17, 8]
+    - coord: [18, 8]
+    - coord: [19, 8]
+    - coord: [20, 8]
+    - coord: [21, 8]
+    - coord: [22, 8]
+    - coord: [23, 8]
+    - coord: [24, 8]
+      sides: 5
+    - coord: [25, 8]
+    - coord: [26, 8]
+    - coord: [27, 8]
+    - coord: [28, 8]
+    - coord: [29, 8]
+    - coord: [30, 8]
+    - coord: [31, 8]
+
+    - coord: [5, 9]
+    - coord: [6, 9]
+    - coord: [7, 9]
+    - coord: [8, 9]
+    - coord: [9, 9]
+    - coord: [10, 9]
+    - coord: [11, 9]
+    - coord: [12, 9]
+    - coord: [13, 9]
+    - coord: [14, 9]
+    - coord: [15, 9]
+    - coord: [16, 9]
+    - coord: [17, 9]
+
+    - coord: [21, 9]
+
+    - coord: [23, 9]
+    - coord: [24, 9]
+    - coord: [25, 9]
+    - coord: [26, 9]
+    - coord: [27, 9]
+    - coord: [28, 9]
+    - coord: [29, 9]
+    - coord: [30, 9]
+    - coord: [31, 9]
+
+
+    - coord: [5, 10]
+    - coord: [6, 10]
+    - coord: [7, 10]
+    - coord: [8, 10]
+    - coord: [9, 10]
+    - coord: [10, 10]
+    - coord: [11, 10]
+    - coord: [12, 10]
+    - coord: [13, 10]
+    - coord: [14, 10]
+    - coord: [15, 10]
+    - coord: [16, 10]
+    - coord: [17, 10]
+    - coord: [22, 10]
+    - coord: [23, 10]
+    - coord: [24, 10]
+    - coord: [25, 10]
+    - coord: [26, 10]
+    - coord: [27, 10]
+    - coord: [28, 10]
+    - coord: [29, 10]
+    - coord: [30, 10]
+    - coord: [31, 10]
+    - coord: [32, 10]
+
+    - coord: [5, 11]
+    - coord: [6, 11]
+    - coord: [7, 11]
+    - coord: [8, 11]
+    - coord: [9, 11]
+    - coord: [10, 11]
+    - coord: [11, 11]
+    - coord: [12, 11]
+    - coord: [13, 11]
+    - coord: [14, 11]
+    - coord: [15, 11]
+    - coord: [18, 11]
+    - coord: [25, 11]
+    - coord: [26, 11]
+    - coord: [27, 11]
+    - coord: [28, 11]
+    - coord: [29, 11]
+    - coord: [30, 11]
+    - coord: [31, 11]
+    - coord: [32, 11]
+
+    - coord: [5, 12]
+    - coord: [6, 12]
+
+    - coord: [9, 12]
+    - coord: [10, 12]
+    - coord: [11, 12]
+    - coord: [12, 12]
+    - coord: [13, 12]
+    - coord: [16, 12]
+    - coord: [19, 12]
+    - coord: [25, 12]
+    - coord: [26, 12]
+    - coord: [27, 12]
+    - coord: [28, 12]
+    - coord: [29, 12]
+    - coord: [30, 12]
+    - coord: [31, 12]
+    - coord: [32, 12]
+    - coord: [33, 12]
+
+    - coord: [5, 13]
+    - coord: [6, 13]
+    - coord: [10, 13]
+    - coord: [11,13]
+      <<: *ground
+      resources:
+      - Offer
+    - coord: [12, 13]
+    - coord: [17, 13]
+    - coord: [18, 13]
+    - coord: [19, 13]
+    - coord: [20, 13]
+    - coord: [25, 13]
+    - coord: [26, 13]
+    - coord: [27, 13]
+    - coord: [28, 13]
+    - coord: [29, 13]
+    - coord: [30, 13]
+    - coord: [31, 13]
+    - coord: [32, 13]
+    - coord: [33, 13]
+    - coord: [34, 13]
+    - coord: [35, 13]
+
+    - coord: [5, 14]
+    - coord: [11, 14]
+    - coord: [12, 14]
+    - coord: [19, 14]
+    - coord: [20, 14]
+    - coord: [21, 14]
+    - coord: [25, 14]
+    - coord: [26, 14]
+    - coord: [27, 14]
+    - coord: [28, 14]
+    - coord: [29, 14]
+    - coord: [30, 14]
+    - coord: [31, 14]
+    - coord: [32, 14]
+    - coord: [33, 14]
+    - coord: [34, 14]
+    - coord: [35, 14]
+    - coord: [36, 14]
+
+    - coord: [0, 15]
+    - coord: [1, 15]
+
+    - coord: [5, 15]
+    - coord: [6, 15]
+    - coord: [20, 15]
+    - coord: [21, 15]
+    - coord: [26, 15]
+    - coord: [27, 15]
+    - coord: [28, 15]
+    - coord: [29, 15]
+    - coord: [30, 15]
+    - coord: [31, 15]
+    - coord: [32, 15]
+    - coord: [33, 15]
+    - coord: [34, 15]
+    - coord: [35, 15]
+    - coord: [36, 15]
+    - coord: [37, 15]
+    - coord: [38, 15]
+    - coord: [39, 15]
+
+    - coord: [0, 16]
+      sides: 5
+    - coord: [1, 16]
+    - coord: [2, 16]
+    - coord: [5, 16]
+    - coord: [6, 16]
+    - coord: [12,16]
+    - coord: [20, 16]
+    - coord: [21, 16]
+    - coord: [27, 16]
+    - coord: [28, 16]
+    - coord: [29, 16]
+    - coord: [30, 16]
+    - coord: [31, 16]
+    - coord: [32, 16]
+      sides: 5
+    - coord: [33, 16]
+    - coord: [34, 16]
+    - coord: [35, 16]
+    - coord: [36, 16]
+    - coord: [37, 16]
+    - coord: [38, 16]
+    - coord: [39, 16]
+
+    - coord: [1, 17]
+    - coord: [2, 17]
+    - coord: [3, 17]
+    - coord: [4, 17]
+    - coord: [5, 17]
+    - coord: [6, 17]
+    - coord: [7, 17]
+
+    - coord: [12, 17]
+    - coord: [13, 17]
+    - coord: [21, 17]
+      decor:
+      - bridge
+    - coord: [36, 17]
+    - coord: [37, 17]
+    - coord: [38, 17]
+    - coord: [39, 17]
+
+    - coord: [2, 18]
+    - coord: [3, 18]
+    - coord: [4, 18]
+    - coord: [5, 18]
+
+    - coord: [13, 18]
+    - coord: [22, 18]
+    - coord: [23, 18]
+    - coord: [37, 18]
+    - coord: [38, 18]
+    - coord: [39, 18]
+
+    - coord: [3, 19]
+    - coord: [5, 19]
+    - coord: [22, 19]
+    - coord: [23, 19]
+    - coord: [38, 19]
+    - coord: [39, 19]
+
+    - coord: [13, 19]
+    - coord: [13, 20]
+
+    - coord: [4, 20]
+    - coord: [23, 20]
+    - coord: [39, 20]
+
+  - name: volcano
+    defaults: *lava
+    tiles:
+
+    - coord: [33,2]
+      <<: *wall
+
+    - coord: [33,3]
+      <<: *wall
+    - coord: [34,3]
+
+    - coord: [33,4]
+      <<: *wall
+    - coord: [34,4]
+
+    - coord: [33,5]
+      <<: *wall
+    - coord: [34,5]
+      <<: *wall
+    - coord: [35,5]
+
+    - coord: [0, 6]
+    - coord: [33, 6]
+    - coord: [34, 6]
+    - coord: [35, 6]
+    - coord: [36, 6]
+    - coord: [37, 6]
+
+    - coord: [0, 7]
+    - coord: [32, 7]
+    - coord: [33, 7]
+    - coord: [34, 7]
+    - coord: [35, 7]
+    - coord: [36, 7]
+    - coord: [37, 7]
+    - coord: [38, 7]
+
+    - coord: [0, 8]
+      sides: 5
+    - coord: [32, 8]
+      sides: 5
+    - coord: [33, 8]
+    - coord: [34, 8]
+    - coord: [35, 8]
+    - coord: [36, 8]
+    - coord: [37, 8]
+    - coord: [38, 8]
+    - coord: [39, 8]
+
+    - coord: [0, 9]
+    - coord: [1, 9]
+    - coord: [32, 9]
+    - coord: [33, 9]
+    - coord: [34, 9]
+    - coord: [35, 9]
+    - coord: [36, 9]
+    - coord: [37, 9]
+    - coord: [38, 9]
+    - coord: [39, 9]
+
+    - coord: [0, 10]
+    - coord: [1, 10]
+    - coord: [33, 10]
+    - coord: [34, 10]
+    - coord: [35, 10]
+    - coord: [36, 10]
+    - coord: [37, 10]
+    - coord: [38, 10]
+    - coord: [39, 10]
+
+    - coord: [0, 11]
+    - coord: [1, 11]
+
+    - coord: [33, 11]
+      <<: *wall
+    - coord: [34, 11]
+    - coord: [35, 11]
+    - coord: [36, 11]
+    - coord: [37, 11]
+    - coord: [38, 11]
+    - coord: [39, 11]
+
+    - coord: [0, 12]
+    - coord: [1, 12]
+    - coord: [34, 12]
+      <<: *wall
+    - coord: [35, 12]
+      <<: *wall
+    - coord: [36, 12]
+    - coord: [37, 12]
+    - coord: [38, 12]
+    - coord: [39, 12]
+
+    - coord: [0, 13]
+    - coord: [36, 13]
+      <<: *wall
+    - coord: [37, 13]
+      <<: *wall
+    - coord: [38, 13]
+    - coord: [39, 13]
+
+    - coord: [37, 14]
+      <<: *wall
+    - coord: [38, 14]
+      <<: *wall
+    - coord: [39, 14]
+      <<: *wall
+
+  - name: area1
+    defaults: *grass
+    tiles:
+    - coord: [14, 12]
+      resources:
+      - Helmet Merchant
+    - coord: [15, 12]
+
+    - coord: [13, 13]
+      resources:
+      - Wool Merchant
+    - coord: [14, 13]
+    - coord: [15, 13]
+    - coord: [16, 13]
+      resources:
+      - Axe Refinery
+
+    - coord: [13, 14]
+      resources:
+      - Autumn Pine Tree
+    - coord: [14, 14]
+    - coord: [15, 14]
+      resources:
+      - Tailor Refinery
+    - coord: [16, 14]
+    - coord: [17, 14]
+      resources:
+      - Autumn Pine Tree
+    - coord: [18, 14]
+      resources:
+      - Iron Refinery
+
+
+    - coord: [12, 15]
+      decor: bridge
+      tilenum: 3
+      <<: *ocean
+    - coord: [13, 15]
+      resources:
+      - Autumn Pine Tree
+      tilenum: 2
+    - coord: [14, 15]
+    - coord: [15, 15]
+    - coord: [16, 15]
+    - coord: [17, 15]
+      resources:
+      - Quest
+    - coord: [18, 15]
+    - coord: [19, 15]
+      resources:
+      - Autumn Pine Tree
+
+    - coord: [13, 16]
+      resources:
+      - Plank Refinery
+      tilenum: 1
+    - coord: [14, 16]
+    - coord: [15, 16]
+    - coord: [16, 16]
+      sides: 5
+    - coord: [17, 16]
+      resources:
+      - Portal
+    - coord: [18, 16]
+      <<: *wall
+    - coord: [19, 16]
+
+    - coord: [14, 17]
+      resources:
+      - Autumn Pine Tree
+    - coord: [15, 17]
+    - coord: [17, 17]
+      resources:
+      - Autumn Pine Tree
+    - coord: [18, 17]
+      <<: *wall
+    - coord: [19, 17]
+      resources:
+      - Autumn Pine Treeo
+    - coord: [20, 17]
+
+    - coord: [15, 18]
+      resources:
+      - Autumn Pine Tree
+      decor:
+      - steps_nw
+    - coord: [18, 18]
+      decor:
+      - cage
+    - coord: [19, 18]
+      <<: *wall
+    - coord: [20, 18]
+    - coord: [21, 18]
+      resources:
+      - Rock Merchant
+
+
+    - coord: [19, 19]
+      <<: *wall
+
+  - name: area2a
+    defaults: *farm
+    tiles:
+    - coord: [7,12]
+      resources:
+      - Red Oak Tree
+    - coord: [8,12]
+      resources:
+      - Red Oak Tree
+
+    - coord: [7,13]
+      decor:
+      - sign
+      tilenum: 16
+      height: 14
+    - coord: [8,13]
+      resources:
+      - Scarecrow
+      tilenum: 15
+    - coord: [9,13]
+
+    - coord: [6,14]
+      resources:
+      - Pick Refinery
+      tilenum: 18
+      height: 16
+    - coord: [7,14]
+      tilenum: 17
+      height: 16
+    - coord: [8,14]
+      resources:
+      - Scarecrow
+      - Wheat Field
+      tilenum: 9
+    - coord: [9,14]
+      resources:
+      - Wheat Field
+    - coord: [10,14]
+
+    - coord: [7,15]
+      resources:
+      - Scarecrow
+      tilenum: 19
+      height: 18
+    - coord: [8,15]
+      resources:
+      - Wheat Field
+      tilenum: 8
+    - coord: [9,15]
+      resources:
+      - Red Oak Tree
+      tilenum: 11
+    - coord: [10,15]
+      resources:
+      - Wheat Field
+      tilenum: 5
+    - coord: [11,15]
+      tilenum: 4
+
+
+    - coord: [7,16]
+      height: 20
+    - coord: [8,16]
+      resources:
+      - Entrance
+      tilenum: 20
+      sides: 5
+    - coord: [9,16]
+      resources:
+      - Wheat Field
+      tilenum: 7
+    - coord: [10,16]
+      resources:
+      - Scarecrow
+      tilenum: 6
+    - coord: [11,16]
+      resources:
+      - Wheat Windmill
+      tilenum: 12
+
+  - name: area2b
+    defaults: *mountain
+    tiles:
+    - coord: [9,17]
+    - coord: [10,17]
+      resources:
+      - Autumn Rock
+    - coord: [11,17]
+      resources:
+      - Autumn Rock
+
+    - coord: [6, 18]
+      <<: *wall
+    - coord: [7, 18]
+
+    - coord: [10, 18]
+      resources:
+      - Autumn Rock
+    - coord: [11, 18]
+    - coord: [12, 18]
+      resources:
+      - Autumn Rock
+    - coord: [14, 18]
+      resources:
+      - Armory
+
+    - coord: [6, 19]
+      <<: *wall
+    - coord: [7, 19]
+
+    - coord: [11, 19]
+      resources:
+      - Boss
+    - coord: [12, 19]
+      resources:
+      - Red Oak Tree
+
+    - coord: [7, 20]
+      <<: *wall
+    - coord: [12, 20]
+      decor:
+      - Cage
+
+  - name: area3-mine
+    defaults: *ground
+    tiles:
+    - coord: [14, 19]
+    - coord: [15, 19]
+
+    - coord: [14, 20]
+    - coord: [15, 20]
+
+    - coord: [15, 21]
+
+    - coord: [20, 19]
+    - coord: [21, 19]
+
+    - coord: [20, 20]
+    - coord: [21, 20]
+    - coord: [22, 20]
+
+    - coord: [21, 21]
+    - coord: [22, 21]
+    - coord: [23, 21]
+
+    - coord: [22, 22]
+    - coord: [23, 22]
+
+  - name: area4-mine
+    defaults: *ground
+    tiles:
+    - coord: [4, 19]
+      resources:
+      - key
+    - coord: [5, 20]
+    - coord: [6, 20]
+      <<: *wall
+
+    - coord: [5, 21]
+      <<: *wall
+    - coord: [6, 21]
+    - coord: [7, 21]
+
+    - coord: [6, 22]
+      <<: *wall
+    - coord: [7, 22]
+      <<: *wall
+
+    - coord: [7, 23]
+    - coord: [8, 24]
+      sides: 5
+      rotation: 4
+
+    - coord: [13, 21]
+      <<: *wall
+    - coord: [14, 21]
+      <<: *wall
+
+    - coord: [14, 22]
+    - coord: [15, 22]
+
+    - coord: [15, 23]
+
+    - coord: [23, 23]
+      <<: *wall
+
+    - coord: [27, 17]
+      <<: *wall
+    - coord: [28, 17]
+      <<: *wall
+    - coord: [29, 17]
+      <<: *wall
+    - coord: [30, 17]
+      <<: *wall
+    - coord: [31, 17]
+      <<: *wall
+
+    - coord: [27, 18]
+    - coord: [28, 18]
+    - coord: [29, 18]
+    - coord: [30, 18]
+      <<: *wall
+    - coord: [31, 18]
+
+    - coord: [27, 19]
+      <<: *wall
+    - coord: [28, 19]
+    - coord: [29, 19]
+    - coord: [30, 19]
+      <<: *wall
+    - coord: [31, 19]
+      <<: *wall
+
+    - coord: [28, 20]
+      <<: *wall
+    - coord: [29, 20]
+      <<: *wall
+    - coord: [30, 20]
+    - coord: [31, 20]
+
+    - coord: [29, 21]
+      <<: *wall
+    - coord: [30, 21]
+    - coord: [31, 21]
+
+    - coord: [30, 22]
+      <<: *wall
+    - coord: [31, 22]
+      <<: *wall
+
+    - coord: [31, 23]
+      <<: *wall
+
+    - coord: [33, 17]
+      <<: *wall
+    - coord: [34, 17]
+      <<: *wall
+    - coord: [35, 17]
+      <<: *wall
+
+    - coord: [34, 18]
+    - coord: [35, 18]
+    - coord: [36, 18]
+      <<: *wall
+
+    - coord: [35, 19]
+    - coord: [36, 19]
+    - coord: [37, 19]
+      <<: *wall
+
+    - coord: [36, 20]
+      <<: *wall
+    - coord: [37, 20]
+    - coord: [38, 20]
+      <<: *wall
+
+
+    - coord: [37, 21]
+      <<: *wall
+    - coord: [38, 21]
+    - coord: [39, 21]
+      <<: *wall
+
+    - coord: [38, 22]
+    - coord: [39, 22]
+
+    - coord: [39, 23]
+
+  - name: area5-swamp
+    defaults: *grass
+    tiles:
+    - coord: [21, 11]
+    - coord: [22, 11]
+    - coord: [23, 11]
+    - coord: [24, 11]
+
+    - coord: [21, 12]
+    - coord: [22, 12]
+      <<: *swamp
+    - coord: [23, 12]
+      <<: *swamp
+    - coord: [24, 12]
+
+    - coord: [21, 13]
+    - coord: [22, 13]
+      <<: *swamp
+    - coord: [23, 13]
+      <<: *swamp
+    - coord: [24, 13]
+
+    - coord: [22, 14]
+    - coord: [23, 14]
+      <<: *swamp
+    - coord: [24, 14]
+
+    - coord: [22, 15]
+    - coord: [23, 15]
+      <<: *swamp
+    - coord: [24, 15]
+      <<: *swamp
+    - coord: [25, 15]
+
+    - coord: [22, 16]
+    - coord: [23, 16]
+      <<: *swamp
+    - coord: [24, 16]
+      sides: 5
+      <<: *swamp
+    - coord: [25, 16]
+      <<: *swamp
+    - coord: [26, 16]
+
+    - coord: [22, 17]
+    - coord: [23, 17]
+    - coord: [25, 17]
+      <<: *swamp
+    - coord: [26, 17]
+
+    - coord: [26, 18]
+
+  - name: area6-desert
+    defaults: *beach
+    tiles:
+    - coord: [18, 9]
+    - coord: [19, 9]
+    - coord: [20, 9]
+    - coord: [22, 9]
+
+    - coord: [18, 10]
+    - coord: [19, 10]
+    - coord: [20, 10]
+    - coord: [21, 10]
+
+    - coord: [16, 11]
+    - coord: [17, 11]
+    - coord: [19, 11]
+    - coord: [20, 11]
+
+    - coord: [17, 12]
+    - coord: [18, 12]
+    - coord: [20, 12]
+
+  - name: area7
+    defaults: *ground
+    tiles:
+
+    - coord: [35, 4]
+    - coord: [36, 5]
+
+    - coord: [0, 2]
+    - coord: [0, 3]
+    - coord: [1, 3]
+    - coord: [0, 4]
+    - coord: [1, 4]
+    - coord: [2, 4]
+    - coord: [0, 5]
+    - coord: [1, 5]
+    - coord: [2, 5]
+    - coord: [3, 5]
+    - coord: [4, 5]
+      <<: *wall
+
+    - coord: [1, 6]
+    - coord: [2, 6]
+    - coord: [3, 6]
+      <<: *wall
+    - coord: [4, 6]
+      <<: *wall
+
+    - coord: [1, 7]
+      <<: *wall
+    - coord: [2, 7]
+    - coord: [3, 7]
+      <<: *wall
+
+
+    - coord: [1, 8]
+      <<: *wall
+    - coord: [2, 8]
+    - coord: [3, 8]
+      <<: *wall
+
+  - name: area8
+    defaults: *ground
+    tiles:
+    - coord: [2, 9]
+      <<: *wall
+    - coord: [3, 9]
+    - coord: [4, 9]
+      <<: *wall
+    - coord: [2, 10]
+      <<: *wall
+    - coord: [3, 10]
+    - coord: [4, 10]
+      <<: *wall
+
+    - coord: [2, 11]
+    - coord: [3, 11]
+    - coord: [4, 11]
+      <<: *wall
+
+    - coord: [2, 12]
+    - coord: [3, 12]
+    - coord: [4, 12]
+
+    - coord: [1, 13]
+      <<: *wall
+    - coord: [2, 13]
+    - coord: [3, 13]
+      resources:
+      - Portal
+    - coord: [4, 13]
+
+    - coord: [0, 14]
+      <<: *wall
+    - coord: [1, 14]
+      <<: *wall
+    - coord: [2, 14]
+    - coord: [3, 14]
+    - coord: [4, 14]
+
+    - coord: [2, 15]
+      <<: *wall
+    - coord: [3, 15]
+    - coord: [4, 15]
+    - coord: [3, 16]
+      <<: *wall
+    - coord: [4, 16]
+      <<: *wall
+
+
+styles: |
+  .t-ocean {
+    stroke: none;
+    fill: #0000aa;
+  }
+  .t-lake {
+    fill: #D9FFED;
+  }
+  .t-lava {
+    stroke: none;
+    fill: #aa0000;
+  }
+  .t-wall.tile-top {
+    fill: #514660;
+  }
+  .t-wall.tile-left {
+    fill: #20182E;
+  }
+  .t-wall.tile-right {
+    fill: #20182E;
+  }
+  .t-grass.tile-top {
+    fill: #AAC921;
+  }
+  .t-grass.tile-left {
+    fill: #72811E;
+  }
+  .t-grass.tile-right {
+    fill: #77861D;
+  }
+  .t-farm.tile-top {
+    fill: #E69138;
+  }
+  .t-farm.tile-left {
+    fill: #9F5B14;
+  }
+  .t-farm.tile-right {
+    fill: #9F5B14;
+  }
+  .t-mountain.tile-top {
+    fill: #653A0D;
+  }
+  .t-mountain.tile-left {
+    fill: #140C02;
+  }
+  .t-mountain.tile-right {
+    fill: #2C1905;
+  }
+  .t-ground.tile-top {
+    fill: #64646D;
+  }
+  .t-ground.tile-left {
+    fill: #343539;
+  }
+  .t-ground.tile-right {
+    fill: #3A3A3D;
+  }
+  .t-beach.tile-top {
+    fill: #FAB13D;
+  }
+  .t-beach.tile-left {
+    fill: #915E1A;
+  }
+  .t-beach.tile-right {
+    fill: #915E1A;
+  }

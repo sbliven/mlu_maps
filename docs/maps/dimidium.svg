@@ -74,12 +74,11 @@ svg {
 .hidden {
     display: none;
 }
-    .tile {
-  fill: white;
-  stroke: black;
-  stroke-width: 0.5;
+.tile {
+    stroke: black;
+    stroke-width: 0.5;
 }
-.t-beach.tile-top {
+    .t-beach.tile-top {
   fill: #FAB13D;
 }
 .t-beach.tile-left {

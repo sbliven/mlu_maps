@@ -26,8 +26,9 @@ select {
 }
 
 #map-img {
-    margin:2em 0;
+    margin:2em auto;
     width: 100%;
+    display: block;
 }
 
 #scrollbox {
@@ -48,8 +49,9 @@ select {
     <div class="container">
         <!-- <h1 id="map-name">Diamond Mine</h1> -->
         <select id="map-select" onchange="updateImage(this)">
-            <option value="maps/diamond_mine.svg">Diamond Mine</option>
+            <option value="maps/trollheim.svg">Trollheim</option>
             <option value="maps/dimidium.svg">Dimidium</option>
+            <option value="maps/diamond_mine.svg">Diamond Mine</option>
         </select>
         <div id="scrollbox">
             <object type="image/svg+xml" id="map-img" data="maps/diamond_mine.svg" alt="Map" onload="updateLayers();"></object>
