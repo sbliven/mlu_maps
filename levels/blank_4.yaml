@@ -1,0 +1,210 @@
+defs:
+- &plain
+  type: plain
+  height: 10
+
+levels:
+- name: Large
+  defaults: *plain
+  grid:
+    major: 4
+  background: #fff;
+  regions:
+  - name: default
+    tiles:
+    - coord: [0, 0]
+      sides: 5
+      rotation: 2
+    - coord: [0, 1]
+    - coord: [4, 1]
+    - coord: [8, 1]
+    - coord: [12, 1]
+    - coord: [16, 1]
+    - coord: [0, 2]
+    - coord: [1, 2]
+    - coord: [4, 2]
+    - coord: [5, 2]
+    - coord: [8, 2]
+    - coord: [9, 2]
+    - coord: [12, 2]
+    - coord: [13, 2]
+    - coord: [16, 2]
+    - coord: [17, 2]
+    - coord: [0, 3]
+    - coord: [1, 3]
+    - coord: [2, 3]
+    - coord: [4, 3]
+    - coord: [5, 3]
+    - coord: [6, 3]
+    - coord: [8, 3]
+    - coord: [9, 3]
+    - coord: [10, 3]
+    - coord: [12, 3]
+    - coord: [13, 3]
+    - coord: [14, 3]
+    - coord: [16, 3]
+    - coord: [17, 3]
+    - coord: [18, 3]
+    - coord: [0, 4]
+      sides: 5
+    - coord: [1, 4]
+    - coord: [2, 4]
+    - coord: [3, 4]
+    - coord: [4, 4]
+      sides: 5
+    - coord: [5, 4]
+    - coord: [6, 4]
+    - coord: [7, 4]
+    - coord: [8, 4]
+      sides: 5
+    - coord: [9, 4]
+    - coord: [10, 4]
+    - coord: [11, 4]
+    - coord: [12, 4]
+      sides: 5
+    - coord: [13, 4]
+    - coord: [14, 4]
+    - coord: [15, 4]
+    - coord: [16, 4]
+      sides: 5
+    - coord: [17, 4]
+    - coord: [18, 4]
+    - coord: [19, 4]
+    - coord: [0, 5]
+    - coord: [1, 5]
+    - coord: [2, 5]
+    - coord: [3, 5]
+    - coord: [4, 5]
+    - coord: [5, 5]
+    - coord: [6, 5]
+    - coord: [7, 5]
+    - coord: [8, 5]
+    - coord: [9, 5]
+    - coord: [10, 5]
+    - coord: [11, 5]
+    - coord: [12, 5]
+    - coord: [13, 5]
+    - coord: [14, 5]
+    - coord: [15, 5]
+    - coord: [16, 5]
+    - coord: [17, 5]
+    - coord: [18, 5]
+    - coord: [19, 5]
+    - coord: [0, 6]
+    - coord: [1, 6]
+    - coord: [2, 6]
+    - coord: [3, 6]
+    - coord: [4, 6]
+    - coord: [5, 6]
+    - coord: [6, 6]
+    - coord: [7, 6]
+    - coord: [8, 6]
+    - coord: [9, 6]
+    - coord: [10, 6]
+    - coord: [11, 6]
+    - coord: [12, 6]
+    - coord: [13, 6]
+    - coord: [14, 6]
+    - coord: [15, 6]
+    - coord: [16, 6]
+    - coord: [17, 6]
+    - coord: [18, 6]
+    - coord: [19, 6]
+    - coord: [0, 7]
+    - coord: [1, 7]
+    - coord: [2, 7]
+    - coord: [3, 7]
+    - coord: [4, 7]
+    - coord: [5, 7]
+    - coord: [6, 7]
+    - coord: [7, 7]
+    - coord: [8, 7]
+    - coord: [9, 7]
+    - coord: [10, 7]
+    - coord: [11, 7]
+    - coord: [12, 7]
+    - coord: [13, 7]
+    - coord: [14, 7]
+    - coord: [15, 7]
+    - coord: [16, 7]
+    - coord: [17, 7]
+    - coord: [18, 7]
+    - coord: [19, 7]
+    - coord: [0, 8]
+      sides: 5
+    - coord: [1, 8]
+    - coord: [2, 8]
+    - coord: [3, 8]
+    - coord: [4, 8]
+      sides: 5
+    - coord: [5, 8]
+    - coord: [6, 8]
+    - coord: [7, 8]
+    - coord: [8, 8]
+      sides: 5
+    - coord: [9, 8]
+    - coord: [10, 8]
+    - coord: [11, 8]
+    - coord: [12, 8]
+      sides: 5
+    - coord: [13, 8]
+    - coord: [14, 8]
+    - coord: [15, 8]
+    - coord: [16, 8]
+      sides: 5
+    - coord: [17, 8]
+    - coord: [18, 8]
+    - coord: [19, 8]
+    - coord: [1, 9]
+    - coord: [2, 9]
+    - coord: [3, 9]
+    - coord: [5, 9]
+    - coord: [6, 9]
+    - coord: [7, 9]
+    - coord: [9, 9]
+    - coord: [10, 9]
+    - coord: [11, 9]
+    - coord: [13, 9]
+    - coord: [14, 9]
+    - coord: [15, 9]
+    - coord: [17, 9]
+    - coord: [18, 9]
+    - coord: [19, 9]
+    - coord: [2, 10]
+    - coord: [3, 10]
+    - coord: [6, 10]
+    - coord: [7, 10]
+    - coord: [10, 10]
+    - coord: [11, 10]
+    - coord: [14, 10]
+    - coord: [15, 10]
+    - coord: [18, 10]
+    - coord: [19, 10]
+    - coord: [3, 11]
+    - coord: [7, 11]
+    - coord: [11, 11]
+    - coord: [15, 11]
+    - coord: [19, 11]
+    - coord: [4, 12]
+      sides: 5
+      rotation: 4
+
+styles: |
+  svg {
+    background-color: #fff;
+  }
+  /* Defaults for all tiles */
+  .tile {
+    stroke: black;
+    stroke-width: 0.5;
+  }
+  /* Colors for "plain" type */
+  .t-plain.tile-top {
+    fill: #fff;
+  }
+  .t-plain.tile-left {
+    fill: #666;
+  }
+  .t-plain.tile-right {
+    fill: #999;
+  }
