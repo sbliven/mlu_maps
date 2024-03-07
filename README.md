@@ -35,26 +35,42 @@ Using the tool is described [here](usage.md). It describes how to change level c
 and styles. Contributions of official MLU maps are welcome! See
 [Contributing](CONTRIBUTING.md) for more information.
 
-## TODO
+## Contributing
 
-- [x] Basic hexagons and pentagon tiles
-- [x] Show resources and enemies
-- [ ] Advanced tiles
-  - [ ] Bridges
-  - [ ] Elevators
-  - [ ] Decorative elements (paths, fires, rocket, etc)
-  - [ ] Shops
-- [ ] Levels
-  - [ ] Gaia
-  - [ ] Trollheim
-  - [ ] Dimidium
-    - [x] Diamond Mine
-  - [ ] Factorium
-  - [ ] Wadirum
-  - [ ] Odysseum
-  - [ ] Dragonora
-  - [ ] Egyptium
-  - [ ] Asium
+There are many ways to contribute! Most don't require any coding skills, but rather the patience to encode maps into a readable format.
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for information on how to contribute.
+
+## Level Progress
+
+| Level                  | Tiles | Resources | Numbers |
+| ---------------------- | ----- | --------- | ------- |
+| 1. Gaia                | ❌    | ❌        | ❌      |
+| 2. Trollheim           | ✅    | ⚠️         | ⚠️       |
+| 2.1 Azurite Cavern     | ⚠️     | ⚠️         | ❌      |
+| 2.2 Stufurs Lair       | ❌    | ❌        | ❌      |
+| 2.3 Skellirs Lair      | ⚠️     | ⚠️         | ❌      |
+| 3. Dimidium            | ✅    | ✅        | ⚠️       |
+| 3.1 Shipwreck Shallows | ❌    | ❌        | ❌      |
+| 3.2 Molten Abyss       | ❌    | ❌        | ❌      |
+| 3.3 Diamond Mine       | ✅    | ✅        | ❌      |
+| 3.4 Crash Site         | ❌    | ❌        | ❌      |
+| 3.5 Crabster Zone      | ❌    | ❌        | ❌      |
+| 3.6 Rise of Tentacles  | ❌    | ❌        | ❌      |
+| 4. Factorium           | ❌    | ❌        | ❌      |
+| 4.1 Mystery Keep       | ❌    | ❌        | ❌      |
+| 4.2 Engine Room        | ❌    | ❌        | ❌      |
+| 4.3 Einhar             | ❌    | ❌        | ❌      |
+| 4.4 A 69               | ⚠️     | ⚠️         | ❌      |
+| 5. Wadirum             | ❌    | ❌        | ❌      |
+| 6. Odysseum            | ❌    | ❌        | ❌      |
+| 7. Dragonora           | ❌    | ❌        | ❌      |
+| 8. Egyptium            | ❌    | ❌        | ❌      |
+| 9. Asium               | ❌    | ❌        | ❌      |
+
+✅ Finished
+⚠️ Started (often on paper)
+❌ Not started
 
 ## License
 
