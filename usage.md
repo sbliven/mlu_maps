@@ -25,6 +25,9 @@ Use `mlu_map.py` to generate the level:
 python mlu_map.py levels/test.yaml docs/maps/test.svg
 ```
 
+Use the script `update.md` to generate all levels.
+
+
 ## Level syntax
 
 Levels are defined by a yaml file. See `levels/` for examples.

@@ -8,11 +8,12 @@ from cmath import exp
 from io import BytesIO, StringIO
 from math import cos, pi, sin, sqrt
 
-import svgwrite
+import svgwrite  # type: ignore
 import yaml
 
 camera_angle = pi / 4  # camera angle from zenith
 spacing = 40  # width of one hex
+
 
 def append_class(elem, *classes):
     """Append new classes to an SVG element"""
@@ -302,9 +303,13 @@ svg {{
 .hidden {{
     display: none;
 }}
+.tile {{
+    stroke: black;
+    stroke-width: 0.5;
+}}
     """
     if "styles" in config:
-        css +=  config["styles"]
+        css += config["styles"]
     svg.add(svg.style(css))
 
     level_defaults = {"stroke": "black"}
@@ -331,7 +336,7 @@ svg {{
             sides = attrs.pop("sides", 6)
             tilenum = attrs.pop("tilenum", None)
             rotation = attrs.pop("rotation", 0)
-            height = tile.get("height",0)
+            height = tile.get("height", 0)
             tile_id = f"tile-{x}-{y}"
             # attrs["class"] = f"tile t-{region['name']}"
 
@@ -373,7 +378,15 @@ svg {{
             group.add(geom)
 
             if tilenum is not None:
-                group.add(svg.text(str(tilenum), insert=(center[0], center[1] - height * sin(camera_angle)), text_anchor="middle", dominant_baseline="middle", class_="tilenum hidden"))
+                group.add(
+                    svg.text(
+                        str(tilenum),
+                        insert=(center[0], center[1] - height * sin(camera_angle)),
+                        text_anchor="middle",
+                        dominant_baseline="middle",
+                        class_="tilenum hidden",
+                    )
+                )
 
             for i, resource in enumerate(icons):
                 # import pdb;pdb.set_trace()
@@ -419,7 +432,6 @@ svg {{
                     href=f"#{img_id}", insert=insert
                 )  # note that use doesn't support size
                 group.add(img)
-
 
     svg.viewbox(bounds[0], bounds[1], bounds[2] - bounds[0], bounds[3] - bounds[1])
     # svg.width = f"bounds[2]-bounds[0]
