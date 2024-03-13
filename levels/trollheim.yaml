@@ -558,7 +558,7 @@ levels:
     - coord: [16, 15]
     - coord: [17, 15]
       resources:
-      - Quest
+      - Quests
     - coord: [18, 15]
     - coord: [19, 15]
       resources:
@@ -590,7 +590,7 @@ levels:
       <<: *wall
     - coord: [19, 17]
       resources:
-      - Autumn Pine Treeo
+      - Autumn Pine Tree
     - coord: [20, 17]
 
     - coord: [15, 18]
@@ -689,7 +689,9 @@ levels:
       tilenum: 6
     - coord: [11,16]
       resources:
-      - Wheat Windmill
+      - Wheat Merchant
+      decor:
+      - windmill
       tilenum: 12
 
   - name: area2b
@@ -706,6 +708,9 @@ levels:
     - coord: [6, 18]
       <<: *wall
     - coord: [7, 18]
+      resources:
+      - Autumn Rock
+
 
     - coord: [10, 18]
       resources:
@@ -721,10 +726,12 @@ levels:
     - coord: [6, 19]
       <<: *wall
     - coord: [7, 19]
+      resources:
+      - Autumn Rock
 
     - coord: [11, 19]
       resources:
-      - Boss
+      - Mountain Troll
     - coord: [12, 19]
       resources:
       - Red Oak Tree
@@ -739,33 +746,57 @@ levels:
     defaults: *ground
     tiles:
     - coord: [14, 19]
+      tilenum: 56
     - coord: [15, 19]
+      resources:
+      - Autumn Rock
+      - Bear
 
     - coord: [14, 20]
+      tilenum: 58
+      resources:
+      - Planet Challenge
     - coord: [15, 20]
+      resources:
+      - Autumn Rock
+      tilenum: 57
 
     - coord: [15, 21]
 
     - coord: [20, 19]
+      resources:
+      - Bear
+      - Autumn Rock
     - coord: [21, 19]
 
     - coord: [20, 20]
+      resources:
+      - Bear
     - coord: [21, 20]
+      resources:
+      - Autumn Rock
     - coord: [22, 20]
+      resources:
+      - Autumn Rock
 
     - coord: [21, 21]
     - coord: [22, 21]
     - coord: [23, 21]
+      resources:
+      - Autumn Rock
 
     - coord: [22, 22]
     - coord: [23, 22]
+      resources:
+      - Offer
+      tilenum: 64
 
   - name: area4-mine
     defaults: *ground
     tiles:
     - coord: [4, 19]
       resources:
-      - key
+      - Gold Key
     - coord: [5, 20]
     - coord: [6, 20]
       <<: *wall

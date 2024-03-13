@@ -45,7 +45,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for information on how to contribute.
 
 | Level                  | Tiles | Resources | Numbers |
 | ---------------------- | ----- | --------- | ------- |
-| 1. Gaia                | ❌    | ❌        | ❌      |
+| 1. Gaia                | ✅    | ⚠️        | ❌      |
 | 2. Trollheim           | ✅    | ⚠️         | ⚠️       |
 | 2.1 Azurite Cavern     | ⚠️     | ⚠️         | ❌      |
 | 2.2 Stufurs Lair       | ❌    | ❌        | ❌      |
