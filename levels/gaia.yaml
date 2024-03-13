@@ -137,6 +137,363 @@ levels:
     major: 8
   regions:
 
+  - name: area1-grass
+    defaults: *grass
+    tiles:
+
+    - coord: [13, 17]
+    - coord: [14, 17]
+    - coord: [15, 17]
+    - coord: [16, 17]
+    - coord: [17, 17]
+    - coord: [19, 17]
+      resources:
+      - Gold Chest 1
+      tilenum: 27
+    - coord: [13, 16]
+      resources:
+        # change character
+      - Skin Portal
+      tilenum: 50
+    - coord: [14, 16]
+      resources:
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+    - coord: [15, 16]
+    - coord: [16, 16]
+      sides: 5
+    - coord: [17, 16]
+    - coord: [18, 16]
+      resources:
+      - Portal
+      tilenum: 24
+    - coord: [19, 16]
+    - coord: [16, 15]
+      resources:
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+    - coord: [17, 15]
+    - coord: [18, 15]
+      resources:
+      - Oak Tree
+    - coord: [19, 15]
+      resources:
+      - Oak Tree
+      - Oak Tree
+    - coord: [15, 14]
+    - coord: [16, 14]
+      decor:
+      - sign
+    - coord: [17, 14]
+      resources:
+      - Wood Refinery
+    - coord: [18, 14]
+      resources:
+      - Pet
+    - coord: [14, 13]
+      resources:
+      - Quests
+    - coord: [15, 13]
+      resources:
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+    - coord: [16, 13]
+    - coord: [17, 13]
+      resources:
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+    - coord: [13, 12]
+      resources:
+      - Wood Merchant
+      decor:
+      - Azurite Ad
+      tilenum: 19
+    - coord: [15, 12]
+      resources:
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+      - Oak Tree
+    - coord: [16, 12]
+      resources:
+      - Weapon Refinery
+      tilenum: 29
+
+  - name: area2-rocks
+    defaults: *ground
+    tiles:
+    - coord: [15, 21]
+      resources:
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      - Goblin
+      tilenum: 14
+    - coord: [16, 21]
+      resources:
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      tilenum: 13
+    - coord: [17, 21]
+      resources:
+      - Pickaxe Refinery
+      tilenum: 11
+    - coord: [14, 20]
+      resources:
+      - Gold Chest 1
+      - Goblin
+      - Goblin
+      tilenum: 15
+    - coord: [15, 20]
+      resources:
+      - Large Rock
+      - Large Rock
+      tilenum: 10
+    - coord: [16, 20]
+      resources:
+      - Goblin
+      tilenum: 9
+    - coord: [17, 20]
+      decor:
+      - sign
+      - sign
+      - Plank Ad
+      tilenum: 8
+    - coord: [14, 19]
+      resources:
+      - Steel Refinery
+      tilenum: 11
+    - coord: [15, 19]
+      resources:
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      tilenum: 12
+    - coord: [16, 19]
+      resources:
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      tilenum: 7
+    - coord: [17, 19]
+      resources:
+      - Large Rock
+      - Large Rock
+      - Large Rock
+      - Goblin
+      tilenum: 6
+    - coord: [15, 18]
+      resources:
+      - Rock Merchant
+      tilenum: 16
+    - coord: [16, 18]
+      resources:
+      - Large Rock
+      - Large Rock
+      tilenum: 5
+
+  - name: area3-forest
+    defaults: *forest
+    tiles:
+
+    - coord: [20, 25]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      - Log Monster
+    - coord: [21, 25]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      - Log Monster
+    - coord: [22, 25]
+      resources:
+      - Weapon Refinery
+      tilenum: 44
+    - coord: [19, 24]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      tilenum: 37
+
+    - coord: [20, 24]
+      resources:
+      - Weapon Level 9
+      tilenum: 42
+    - coord: [21, 24]
+      resources:
+      - Pine Tree
+    - coord: [18, 23]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      tilenum: 35
+    - coord: [19, 23]
+      resources:
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+      tilenum: 35
+    - coord: [20, 23]
+      decor:
+      - sign
+    - coord: [21, 23]
+      resources:
+      - Pine Tree
+      - Pine Tree
+    - coord: [18, 22]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      - Log Monster
+      tilenum: 34
+    - coord: [19, 22]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+      tilenum: 36
+    - coord: [20, 22]
+      resources:
+      - Azurite Merchant
+      tilenum: 49
+    - coord: [21, 22]
+      resources:
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+      tilenum: 48
+    - coord: [18, 21]
+      resources:
+      - Pine Tree
+      - Pine Tree
+      - Pine Tree
+      tilenum: 33
+    - coord: [20, 21]
+    - coord: [21, 21]
+      resources:
+      - Offer
+      tilenum: 49
+    - coord: [18, 20]
+      resources:
+      - Axe Refinery
+      tilenum: 32
+
+
+  - name: area4-cave
+    defaults: *ground
+    tiles:
+
+    - coord: [22, 24]
+      resources:
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+    - coord: [23, 24]
+    - coord: [24, 24]
+      sides: 5
+    - coord: [22, 23]
+      resources:
+      - Azurite Deposit 1
+      - Azurite Deposit 1
+    - coord: [24, 23]
+    - coord: [25, 23]
+    - coord: [26, 23]
+    - coord: [27, 23]
+    - coord: [24, 22]
+    - coord: [26, 22]
+    - coord: [27, 22]
+    - coord: [23, 21]
+    - coord: [24, 21]
+    - coord: [22, 20]
+    - coord: [25, 20]
+    - coord: [22, 19]
+    - coord: [23, 19]
+    - coord: [24, 19]
+    - coord: [25, 19]
+    - coord: [23, 18]
+    - coord: [24, 18]
+
+    - coord: [23, 25]
+      <<: *wall
+    - coord: [24, 25]
+      <<: *wall
+    - coord: [25, 24]
+      <<: *wall
+    - coord: [26, 24]
+      <<: *wall
+    - coord: [27, 24]
+      <<: *wall
+    - coord: [28, 24]
+      <<: *wall
+    - coord: [23, 23]
+      <<: *wall
+    - coord: [28, 23]
+      <<: *wall
+    - coord: [22, 22]
+      <<: *wall
+    - coord: [23, 22]
+      <<: *wall
+    - coord: [25, 22]
+      <<: *wall
+    - coord: [22, 21]
+      <<: *wall
+    - coord: [25, 21]
+      <<: *wall
+    - coord: [26, 21]
+      <<: *wall
+    - coord: [21, 20]
+      <<: *wall
+    - coord: [23, 20]
+      <<: *wall
+    - coord: [24, 20]
+      <<: *wall
+    - coord: [26, 20]
+      <<: *wall
+    - coord: [21, 19]
+      <<: *wall
+    - coord: [26, 19]
+      <<: *wall
+    - coord: [21, 18]
+      <<: *wall
+    - coord: [22, 18]
+      <<: *wall
+    - coord: [25, 18]
+      <<: *wall
+    - coord: [23, 17]
+      <<: *wall
+    - coord: [24, 17]
+      <<: *wall
+
+    - coord: [21, 17]
+      <<: *beach
+    - coord: [22, 17]
+      <<: *beach
+    - coord: [22, 16]
+      <<: *beach
+
+
   - name: desert
     defaults: *desert
     tiles:
@@ -209,173 +566,6 @@ levels:
     - coord: [11, 23]
     - coord: [12, 23]
     - coord: [13, 23]
-
-  - name: forest
-    defaults: *forest
-    tiles:
-
-    - coord: [20, 25]
-    - coord: [21, 25]
-    - coord: [22, 25]
-    - coord: [19, 24]
-    - coord: [20, 24]
-    - coord: [21, 24]
-    - coord: [18, 23]
-    - coord: [19, 23]
-    - coord: [20, 23]
-    - coord: [21, 23]
-    - coord: [18, 22]
-    - coord: [19, 22]
-    - coord: [20, 22]
-    - coord: [21, 22]
-    - coord: [18, 21]
-    - coord: [20, 21]
-    - coord: [21, 21]
-    - coord: [18, 20]
-  - name: forest
-    defaults: *grass
-    tiles:
-    - coord: [15, 21]
-    - coord: [16, 21]
-    - coord: [17, 21]
-    - coord: [14, 20]
-    - coord: [15, 20]
-    - coord: [16, 20]
-    - coord: [17, 20]
-    - coord: [14, 19]
-    - coord: [15, 19]
-    - coord: [16, 19]
-    - coord: [17, 19]
-    - coord: [15, 18]
-    - coord: [16, 18]
-
-  - name: cave
-    defaults: *ground
-    tiles:
-
-    - coord: [22, 24]
-    - coord: [23, 24]
-    - coord: [24, 24]
-      sides: 5
-    - coord: [22, 23]
-    - coord: [24, 23]
-    - coord: [25, 23]
-    - coord: [26, 23]
-    - coord: [27, 23]
-    - coord: [24, 22]
-    - coord: [26, 22]
-    - coord: [27, 22]
-    - coord: [23, 21]
-    - coord: [24, 21]
-    - coord: [22, 20]
-    - coord: [25, 20]
-    - coord: [22, 19]
-    - coord: [23, 19]
-    - coord: [24, 19]
-    - coord: [25, 19]
-    - coord: [23, 18]
-    - coord: [24, 18]
-
-  - name: cave-walls
-    defaults: *wall
-    tiles:
-
-    - coord: [23, 25]
-    - coord: [24, 25]
-    - coord: [25, 24]
-    - coord: [26, 24]
-    - coord: [27, 24]
-    - coord: [28, 24]
-    - coord: [23, 23]
-    - coord: [28, 23]
-    - coord: [22, 22]
-    - coord: [23, 22]
-    - coord: [25, 22]
-    - coord: [22, 21]
-    - coord: [25, 21]
-    - coord: [26, 21]
-    - coord: [21, 20]
-    - coord: [23, 20]
-    - coord: [24, 20]
-    - coord: [26, 20]
-    - coord: [21, 19]
-    - coord: [26, 19]
-    - coord: [21, 18]
-    - coord: [22, 18]
-    - coord: [25, 18]
-    - coord: [23, 17]
-    - coord: [24, 17]
-
-  - name: cave-beach
-    defaults: *beach
-    tiles:
-
-    - coord: [21, 17]
-    - coord: [22, 17]
-    - coord: [22, 16]
-
-  - name: area1-grass
-    defaults: *grass
-    tiles:
-
-    - coord: [13, 17]
-    - coord: [14, 17]
-    - coord: [15, 17]
-    - coord: [16, 17]
-    - coord: [17, 17]
-    - coord: [19, 17]
-      resources:
-      - Gold Chest 1
-      tilenum: 27
-    - coord: [13, 16]
-    - coord: [14, 16]
-      resources:
-      - Oak Tree
-      - Oak Tree
-      - Oak Tree
-      - Oak Tree
-    - coord: [15, 16]
-    - coord: [16, 16]
-      sides: 5
-    - coord: [17, 16]
-    - coord: [18, 16]
-      resources:
-      - Portal
-    - coord: [19, 16]
-    - coord: [16, 15]
-    - coord: [17, 15]
-    - coord: [18, 15]
-    - coord: [19, 15]
-    - coord: [15, 14]
-    - coord: [16, 14]
-    - coord: [17, 14]
-    - coord: [18, 14]
-    - coord: [14, 13]
-      resources:
-      - Quests
-    - coord: [15, 13]
-      resources:
-      - Oak Tree
-      - Oak Tree
-      - Oak Tree
-    - coord: [16, 13]
-    - coord: [17, 13]
-    - coord: [13, 12]
-      resources:
-      - Wood Merchant
-      decor:
-      - Azurite Ad
-      tilenum: 19
-    - coord: [15, 12]
-      resources:
-      - Oak Tree
-      - Oak Tree
-      - Oak Tree
-      - Oak Tree
-      - Oak Tree
-    - coord: [16, 12]
-      resources:
-      - Weapon Refinery
 
   - name: mushroom
     defaults: *shroom
