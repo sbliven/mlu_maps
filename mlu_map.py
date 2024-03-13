@@ -14,6 +14,7 @@ import yaml
 camera_angle = pi / 4  # camera angle from zenith
 spacing = 40  # width of one hex
 
+root = pathlib.Path(__file__).parent
 
 def append_class(elem, *classes):
     """Append new classes to an SVG element"""
@@ -414,10 +415,10 @@ svg {{
                 img_id = svg_identifier(f"img-{resource}-{len(icons)}")
                 if img_id not in images:
                     try:
-                        img_href = embed_image(f"sprites/{resource}.png")
+                        img_href = embed_image(pathlib.Path(root, "sprites", f"{resource}.png"))
                     except FileNotFoundError:
                         logging.warning(f"Unknown resource {resource!r}")
-                        img_href = embed_image(f"sprites/question.png")
+                        img_href = embed_image(pathlib.Path(root, "sprites", "question.png"))
 
                     img = svg.image(
                         id_=img_id,
